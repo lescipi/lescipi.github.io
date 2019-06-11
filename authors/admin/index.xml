@@ -7,7 +7,6 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Sun, 07 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://lescipi.github.io/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,6 +18,15 @@
       
       <guid>https://lescipi.github.io/publication/preprint/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.</description>
+    </item>
+    
+    <item>
+      <title>Display Jupyter Notebooks with Academic</title>
+      <link>https://lescipi.github.io/post/mcmc_tfp/</link>
+      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://lescipi.github.io/post/mcmc_tfp/</guid>
+      <description>Learn how to blog in Academic using Jupyter notebooks</description>
     </item>
     
     <item>
@@ -60,7 +68,7 @@
     <item>
       <title></title>
       <link>https://lescipi.github.io/authors/admin/</link>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://lescipi.github.io/authors/admin/</guid>
       <description>Pietro Lesci is a recent graduate at Bocconi University and former trainee at European Central Bank in the Directorate of General Statistics.</description>
