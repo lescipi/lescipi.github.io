@@ -7,6 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019</copyright>
+    <lastBuildDate>Wed, 19 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://lescipi.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +15,7 @@
     <item>
       <title>Bayesian Inference with MCMC</title>
       <link>https://lescipi.github.io/post/mcmc_tfp/</link>
-      <pubDate>Tue, 11 Jun 2019 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 19 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://lescipi.github.io/post/mcmc_tfp/</guid>
       <description>MCMC sampling: The Random-Walk Metropolis-Hasting algorithm explained with TensonFlow Probability</description>
