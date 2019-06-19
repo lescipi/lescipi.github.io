@@ -12,50 +12,12 @@
     
     
     <item>
-      <title>Statistical concepts with R</title>
-      <link>https://lescipi.github.io/post/2019-05-30-statistics-with-r/</link>
-      <pubDate>Thu, 30 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://lescipi.github.io/post/2019-05-30-statistics-with-r/</guid>
-      <description>In this chapter we review the basics of the R programming language and we explore the tidyverse: a universe of interrelated packages that modernize the basic R and simplify operations in a coherent way. It contributed to the estabilishment of R as one of the preferred tools for data science outside the academia.</description>
-    </item>
-    
-    <item>
-      <title>Display Jupyter Notebooks with Academic</title>
+      <title>Bayesian Inference with MCMC</title>
       <link>https://lescipi.github.io/post/mcmc_tfp/</link>
-      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 11 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://lescipi.github.io/post/mcmc_tfp/</guid>
-      <description>Learn how to blog in Academic using Jupyter notebooks</description>
-    </item>
-    
-    <item>
-      <title>Display Jupyter Notebooks with Academic</title>
-      <link>https://lescipi.github.io/post/jupyter/</link>
-      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://lescipi.github.io/post/jupyter/</guid>
-      <description>Learn how to blog in Academic using Jupyter notebooks</description>
-    </item>
-    
-    <item>
-      <title>Academic: the website builder for Hugo</title>
-      <link>https://lescipi.github.io/post/getting-started/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://lescipi.github.io/post/getting-started/</guid>
-      <description>Create a beautifully simple website in under 10 minutes.</description>
-    </item>
-    
-    <item>
-      <title>Hello R Markdown</title>
-      <link>https://lescipi.github.io/post/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>https://lescipi.github.io/post/2015-07-23-r-rmarkdown/</guid>
-      <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
+      <description>MCMC sampling: The Random-Walk Metropolis-Hasting algorithm explained with TensonFlow Probability</description>
     </item>
     
   </channel>
