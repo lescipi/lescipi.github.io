@@ -14,19 +14,19 @@
     
     <item>
       <title>Thesis</title>
-      <link>https://lescipi.github.io/project/thesis/thesis/</link>
+      <link>https://lescipi.github.io/project/thesis/</link>
       <pubDate>Mon, 24 Jun 2019 17:09:11 +0200</pubDate>
       
-      <guid>https://lescipi.github.io/project/thesis/thesis/</guid>
+      <guid>https://lescipi.github.io/project/thesis/</guid>
       <description>Neural Process implementation in &lt;code&gt;Pytorch&lt;/code&gt;</description>
     </item>
     
     <item>
       <title>Statistical Concepts with R</title>
-      <link>https://lescipi.github.io/project/statistical_concepts_r/external/</link>
+      <link>https://lescipi.github.io/project/statistical_concepts_r/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://lescipi.github.io/project/statistical_concepts_r/external/</guid>
+      <guid>https://lescipi.github.io/project/statistical_concepts_r/</guid>
       <description>Book written with &lt;code&gt;bookdown&lt;/code&gt; about elementary statistical concepts.</description>
     </item>
     
