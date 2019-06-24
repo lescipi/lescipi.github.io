@@ -109,6 +109,15 @@
     </item>
     
     <item>
+      <title>Thesis</title>
+      <link>https://lescipi.github.io/project/thesis/thesis/</link>
+      <pubDate>Mon, 24 Jun 2019 17:09:11 +0200</pubDate>
+      
+      <guid>https://lescipi.github.io/project/thesis/thesis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Bayesian Inference with MCMC</title>
       <link>https://lescipi.github.io/post/mcmc_tfp/</link>
       <pubDate>Wed, 19 Jun 2019 00:00:00 +0000</pubDate>
@@ -160,22 +169,34 @@ sns.despine();
 
 &lt;p&gt;From a Bayesian viewpoint, we have to define a prior distribution for this parameter, i.e. $P(\theta)$. Let&amp;rsquo;s also assume a normal distribution as a prior for $\mu$. Our model can be written as follows (we assumed that the prior is a Gaussian distribution with mean 4 and stardard deviation 2)&lt;/p&gt;
 
-&lt;p&gt;$$x_i|\mu \stackrel{i.i.d.}{\sim} \mathcal{N}(\mu, \sigma=1)$$&lt;/p&gt;
+&lt;p&gt;$$x_i|\mu \stackrel{i.i.d.}{\sim} \mathcal{N}(\mu, \sigma=1), \quad i = 1,\dots,N$$&lt;/p&gt;
 
 &lt;p&gt;$$\mu \sim \mathcal{N}(\mu_0 = 4, \sigma_0 = 2)$$&lt;/p&gt;
 
-&lt;p&gt;In the Bayesian Stat lingo, this way of writing the model derives from the fact that knowing nothing about the joint distribution of the $x$&amp;rsquo;s&amp;rsquo; we can assume &lt;a href=&#34;https://en.wikipedia.org/wiki/Exchangeable_random_variables&#34; target=&#34;_blank&#34;&gt;exchangeability&lt;/a&gt;. By the &lt;a href=&#34;https://en.wikipedia.org/wiki/De_Finetti%27s_theorem&#34; target=&#34;_blank&#34;&gt;De Finetti&amp;rsquo;s Theorem&lt;/a&gt; we arrive to the above formulation. Anyway, this goes beyond the scope of this blog post. For more information on Bayesian Analysis look at &lt;a href=&#34;http://www.stat.columbia.edu/~gelman/book/&#34; target=&#34;_blank&#34;&gt;Gelman et al. book&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In the Bayesian Stat lingo, this way of writing the model derives from the fact that knowing nothing about the joint distribution of the $x_i$&amp;rsquo;s we can assume &lt;a href=&#34;https://en.wikipedia.org/wiki/Exchangeable_random_variables&#34; target=&#34;_blank&#34;&gt;exchangeability&lt;/a&gt;. By the &lt;a href=&#34;https://en.wikipedia.org/wiki/De_Finetti%27s_theorem&#34; target=&#34;_blank&#34;&gt;De Finetti&amp;rsquo;s Theorem&lt;/a&gt; we arrive to the above formulation. Anyway, this goes beyond the scope of this blog post. For more information on Bayesian Analysis look at &lt;a href=&#34;http://www.stat.columbia.edu/~gelman/book/&#34; target=&#34;_blank&#34;&gt;Gelman et al. book&lt;/a&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# prior
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# prior 
 mu_0, sigma_0 = 4., 2.
 prior = tfd.Normal(mu_0, sigma_0)
 
-# likelihood
+# likelihood 
 mu, sigma = prior.sample(1), 1. # use a sample from the prior as guess for mu
 likelihood = tfd.Normal(mu, sigma) 
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Since we do not know the mean of the Gaussian distribution which generated the data, we use a sample from the prior distribution as a guess for $\mu$ in order to be able to draw it (we need a value), the likelihood has a mean similar to that of the prior distribution.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Digression&lt;/strong&gt;: note that actually what I called likelihood, is the likelihood for one specific datapoint &amp;ndash; call it $\mathrm{likelihood}_i, i=1,\dots,N$. The &amp;ldquo;proper&amp;rdquo; likelihood function is (given that we have an $i.i.d.$ sample) equal to the product of the &amp;ldquo;per-datapoint&amp;rdquo; likelihoods&lt;/p&gt;
+
+&lt;p&gt;$$\mathcal{L}(\mu; x) = \prod_{i=1}^n \underbrace{\frac{1}{\sqrt{2\pi\sigma^2}} \exp \left\{-\frac{(x_i-\mu)^2}{2\sigma^2}\right\}}_{\mathcal{L}(\mu; x_i)}$$&lt;/p&gt;
+
+&lt;p&gt;When we consider the loglikelihood, obviously, for an $i.i.d.$ sample, the loglikelihood is the sum of the individual &amp;ldquo;per-datapoint&amp;rdquo; likelihoods&lt;/p&gt;
+
+&lt;p&gt;$$\mathcal{l}(\mu; x) = \sum_{i=1}^n \mathcal{l}(\mu; x_i)$$&lt;/p&gt;
+
+&lt;p&gt;Usually, the likelihood is denoted by $\mathcal{L}(\mu; x)$ or $p(x|\mu)$.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;In the graph below, I plot both the prior and the likelihood, as well as the true data-generating process with the data plotted as a rug&lt;/p&gt;
 
@@ -204,7 +225,8 @@ plt.xlim(-5, 7);
 
 &lt;p&gt;This is the key difficulty with the Bayes formula &amp;ndash; while the formula looks pretty enough, for even slightly non-trivial models we cannot compute the posterior in a closed-form way.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: $P(x)$ is a normalizing constant. Up to this normalizing constant, we know exactly how the &lt;em&gt;unnormalized&lt;/em&gt; posterior distribution looks like, i.e.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Digression&lt;/strong&gt;: $P(x)$ is a normalizing constant. Up to this normalizing constant, we know exactly how the &lt;em&gt;unnormalized&lt;/em&gt; posterior distribution looks like, i.e.&lt;/p&gt;
 
 &lt;p&gt;$$P(\theta|x) \propto P(x|\theta) P(\theta)$$&lt;/p&gt;
 
@@ -215,6 +237,7 @@ plt.xlim(-5, 7);
 &lt;p&gt;$$P(\theta|x) \propto P(x, \theta)$$&lt;/p&gt;
 
 &lt;p&gt;meaning that the unnormalized posterior is proportional to the joint distribution of $x$ and $\theta$.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;Back to the example. The prior distribution we defined is convenient because we can actually compute the posterior distribution analytically. That&amp;rsquo;s because for a normal likelihood with known standard deviation, the normal prior distribution for $\mu$ is &lt;a href=&#34;https://en.wikipedia.org/wiki/Conjugate_prior&#34; target=&#34;_blank&#34;&gt;conjugate&lt;/a&gt;, i.e. our posterior distribution will belong to the same family of distributions of the prior. Therefore, we know that our posterior distribution for $\mu$ is also normal. For a mathematical derivation see &lt;a href=&#34;https://docs.google.com/viewer?a=v&amp;amp;pid=sites&amp;amp;srcid=ZGVmYXVsdGRvbWFpbnxiYXllc2VjdHxneDplNGY0MDljNDA5MGYxYTM&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
@@ -346,10 +369,11 @@ mu_proposal = tfd.Normal(mu_current, proposal_width).sample()
 
 &lt;p&gt;If this was all we accepted, $\theta$ would get stuck at a local mode of the target distribution, so we also accept occasional moves to lower density regions.&lt;/p&gt;
 
+&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: The model we define enters the inference scheme only when we evaluate the proposal. In other words, the model we define is important made explicit in the definition of the &lt;code&gt;joint_log_prob&lt;/code&gt; function, that is&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;joint_log_prob = model definition
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;joint_log_prob = model definition&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;Let&amp;rsquo;s now define the joint log probability of the normal model above.&lt;/p&gt;
 
@@ -655,6 +679,15 @@ $$&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>External Project</title>
+      <link>https://lescipi.github.io/project/external-project/external/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://lescipi.github.io/project/external-project/external/</guid>
+      <description></description>
     </item>
     
   </channel>

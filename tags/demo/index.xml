@@ -14,10 +14,10 @@
     
     <item>
       <title>External Project</title>
-      <link>https://lescipi.github.io/project/external-project/</link>
+      <link>https://lescipi.github.io/project/external-project/external/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://lescipi.github.io/project/external-project/</guid>
+      <guid>https://lescipi.github.io/project/external-project/external/</guid>
       <description>An example of linking directly to an external project website using &lt;code&gt;external_link&lt;/code&gt;.</description>
     </item>
     

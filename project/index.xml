@@ -7,27 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Jun 2019 17:09:11 +0200</lastBuildDate>
     
 	<atom:link href="https://lescipi.github.io/project/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>External Project</title>
-      <link>https://lescipi.github.io/project/external-project/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <title>Thesis</title>
+      <link>https://lescipi.github.io/project/thesis/thesis/</link>
+      <pubDate>Mon, 24 Jun 2019 17:09:11 +0200</pubDate>
       
-      <guid>https://lescipi.github.io/project/external-project/</guid>
-      <description>An example of linking directly to an external project website using &lt;code&gt;external_link&lt;/code&gt;.</description>
+      <guid>https://lescipi.github.io/project/thesis/thesis/</guid>
+      <description>Neural Process implementation in Pytorch</description>
     </item>
     
     <item>
-      <title>Internal Project</title>
-      <link>https://lescipi.github.io/project/internal-project/</link>
+      <title>External Project</title>
+      <link>https://lescipi.github.io/project/external-project/external/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://lescipi.github.io/project/internal-project/</guid>
-      <description>An example of using the in-built project page.</description>
+      <guid>https://lescipi.github.io/project/external-project/external/</guid>
+      <description>An example of linking directly to an external project website using &lt;code&gt;external_link&lt;/code&gt;.</description>
     </item>
     
   </channel>
