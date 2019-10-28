@@ -29,7 +29,7 @@
   
     
   
-  <meta name="description" content="Research Assistant">
+  <meta name="description" content="">
 
   
   <link rel="alternate" hreflang="en-us" href="https://lescipi.github.io/authors/admin/">
@@ -83,7 +83,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.8b0ade0dc3825de411be68268eb3bb82.css">
+  <link rel="stylesheet" href="/css/academic.min.5f9ae73323af28212efa727e9f79a9e1.css">
 
   
 
@@ -117,7 +117,7 @@
   <meta property="og:site_name" content="Pietro Lesci">
   <meta property="og:url" content="https://lescipi.github.io/authors/admin/">
   <meta property="og:title" content=" | Pietro Lesci">
-  <meta property="og:description" content="Research Assistant"><meta property="og:image" content="https://lescipi.github.io/img/icon-192.png">
+  <meta property="og:description" content=""><meta property="og:image" content="https://lescipi.github.io/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
   <meta property="og:updated_time" content="2019-06-19T00:00:00&#43;00:00">
@@ -146,7 +146,8 @@
 
       <div id="search-box">
         
-        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
         
       </div>
 
@@ -197,9 +198,16 @@
         
         
         
+          
+          
+          
+            
+          
+          
+        
 
         <li class="nav-item">
-          <a class="nav-link " href="/home">
+          <a class="nav-link " href="/#about">
             
             <span>Home</span>
             
@@ -223,11 +231,51 @@
         
         
         
+          
+          
+          
+            
+          
+          
+        
 
         <li class="nav-item">
-          <a class="nav-link " href="/blog">
+          <a class="nav-link " href="/#posts">
             
-            <span>Blog</span>
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects">
+            
+            <span>Projects</span>
             
           </a>
         </li>
@@ -265,6 +313,10 @@
 
         
 
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
         
 
         
@@ -314,13 +366,13 @@
 
       <div class="portrait-title">
         <h2 itemprop="name">Pietro Lesci</h2>
-        <h3 itemprop="jobTitle">Research Assistant</h3>
+        
 
         
         <h3 itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
-          <a href="https://www.unibocconi.eu/wps/wcm/connect/Bocconi/SitoPubblico_EN/Navigation&#43;Tree/Home/" target="_blank" itemprop="url" rel="noopener">
+          
           <span itemprop="name">Bocconi University</span>
-          </a>
+          
         </h3>
         
       </div>
@@ -404,7 +456,7 @@
     
     
 
-    <p>I am a Research Assistant in NLP at the <a href="http://www.bidsa.unibocconi.eu/wps/wcm/connect/Site/Bidsa/Home" target="_blank">Bocconi Institute for Data Science and Analytics</a> (BIDSA) in the <a href="http://www.bidsa.unibocconi.eu/wps/wcm/connect/Site/Bidsa/Home" target="_blank">Data and Marketing Insights</a> (DMI) research unit, and a former trainee at the ECB in the Directorate of General Statistics. I am interested in NLP, Bayesian deep learning, Bayesian nonparametric statistics, complexity science, and their application to the study of the socio-economic environment and all its heterogeneous interacting parts. I am a passionate musician and a machine learning enthusiast.</p>
+    <p>Pietro Lesci is a recent graduate at Bocconi University and a former trainee at the European Central Bank in the Directorate of General Statistics. First of six, he is a passionate musician and a machine learning enthusiast.</p>
 
 
     <div class="row">
@@ -420,7 +472,7 @@
           
           <li>Bayesian Nonparametrics</li>
           
-          <li>Probabilistic Machine Learning</li>
+          <li>Statistical Machine Learning</li>
           
           <li>Probabilistic Programming</li>
           
@@ -468,7 +520,7 @@
       <ul>
         
         <li>
-          <a href="/blog/mcmc_tfp/">Bayesian Inference with MCMC</a>
+          <a href="/post/mcmc_tfp/">Bayesian Inference with MCMC</a>
         </li>
         
       </ul>
@@ -568,7 +620,7 @@
     
     
     
-    <script id="dsq-count-scr" src="//lescipi.disqus.com/count.js" async></script>
+    <script id="dsq-count-scr" src="//https-lescipi-github-io.disqus.com/count.js" async></script>
     
 
     
@@ -577,18 +629,52 @@
     
 
     
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
 
     
     
 
     
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
 
     
     
 
     
     
-
     
     
     
@@ -596,12 +682,12 @@
     
     
     
+      
     
     
     
     
-    
-    <script src="/js/academic.min.8834801a505187ca6c5c1fd80508d016.js"></script>
+    <script src="/js/academic.min.48a32d9c830bf89cbc5832982887d70d.js"></script>
 
   </body>
 </html>
