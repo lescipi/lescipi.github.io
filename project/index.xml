@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Pietro Lesci</title>
@@ -19,6 +19,15 @@
       
       <guid>https://lescipi.github.io/project/thesis/</guid>
       <description>Neural Process implementation in &lt;code&gt;Pytorch&lt;/code&gt;</description>
+    </item>
+    
+    <item>
+      <title>Wordify</title>
+      <link>https://lescipi.github.io/project/wordify/</link>
+      <pubDate>Mon, 24 Jun 2019 17:09:11 +0200</pubDate>
+      
+      <guid>https://lescipi.github.io/project/wordify/</guid>
+      <description>Wordify is an online textual processing tool that allows to find out which terms are most indicative for each dependent variable values.</description>
     </item>
     
     <item>

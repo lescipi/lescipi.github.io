@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on Pietro Lesci</title>
@@ -18,7 +18,8 @@
       <pubDate>Wed, 19 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://lescipi.github.io/authors/admin/</guid>
-      <description>Pietro Lesci is a recent graduate at Bocconi University and a former trainee at the European Central Bank in the Directorate of General Statistics. First of six, he is a passionate musician and a machine learning enthusiast.</description>
+      <description>I graduated in Economic and Social Sciences at Bocconi University in 2019. In my thesis, I worked on the statistical interpretation of deep learning models.
+Since 2019, I am a Research Assistant at the Bocconi Institute for Data Science and Analytics where I work in Natural Language Processing, a subfield of artificial intelligence. My research focuses on developing machine learning models capable of general linguistic intelligence. I am interested in building computational systems able to continually learn and adapt to new domains.</description>
     </item>
     
   </channel>
